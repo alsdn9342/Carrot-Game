@@ -10,8 +10,6 @@ export const Reason = Object.freeze({
     cancel: 'cancel',
 });
 
-
-// Builder Pattern
 export default class GameBuilder {
     withGameDuration(duration){
        this.gameDuration = duration;
@@ -150,7 +148,6 @@ updateTimerText(time){
 
 
 initGame(){
-// create carrot and bugs and then add them to fild
 this.score = 0;
 this.gameScore.innerText = this.carrotCount;
 this.gameField.init(); 
