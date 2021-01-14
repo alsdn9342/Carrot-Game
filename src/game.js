@@ -3,6 +3,7 @@
 import { Field, ItmeType } from './field.js';
 import * as sound  from './sound.js';
 
+//enum.
 export const Reason = Object.freeze({
     win: 'win',
     lose: 'lose',
@@ -106,7 +107,7 @@ class Game{
         }
     };
 
-
+    
 showStopButton(){
     const icon = this.gameBtn.querySelector(".fas");
     icon.classList.add("fa-stop");

@@ -3,6 +3,7 @@ import * as sound  from './sound.js';
 
 const CARROT_SIZE = 80;
 
+//It is like enum in Java.
 export const ItmeType = Object.freeze({
     carrot: 'carrot',
     bug: 'bug',
@@ -61,12 +62,12 @@ export class Field{
     } else if (target.matches(".bug")){
         target.remove();
         sound.playBug();
-        this.onItemClick && this.onItemClick('bug');
+        this.onItemClick && this.onItemClick(ItmeType.bug);
    }
 }
 };
 
-//It plays as static function by placing it outside the class, Field.
+//It plays as static function being placed on outside the class, Field.
 function randomNumber(min, max){
     return Math.random() * (max - min) + min;
 }
